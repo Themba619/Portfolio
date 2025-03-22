@@ -57,7 +57,7 @@ const Footer = () => {
       
       <div className="max-w-7xl mx-auto">
         <div className="text-center text-white/90">
-          <p className="text-sm mb-4">© {currentYear} John Doe. All rights reserved.</p>
+          <p className="text-sm mb-4">© {currentYear} Themba Biyela. All rights reserved.</p>
           
           <div className="flex justify-center space-x-6 text-sm text-white/70">
             <a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a>

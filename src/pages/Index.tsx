@@ -15,8 +15,8 @@ const Index = () => {
       content.style.opacity = '1';
     }
     
-    // Update document title
-    document.title = 'John Doe | Photographer & Storyteller';
+    
+    document.title = 'Themba Biyela | Software developer & Problem solver';
   }, []);
 
   return (

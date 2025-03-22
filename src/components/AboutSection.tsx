@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
-import { Camera, Edit, BookOpen, Plane, Leaf, Paintbrush } from 'lucide-react';
+import { Code, Edit, Coffee, Shield, Server, Zap } from 'lucide-react';
+import { Icon } from '@iconify/react';
 
 const AboutSection = () => {
   const [animationTriggered, setAnimationTriggered] = useState(false);
@@ -32,21 +33,20 @@ const AboutSection = () => {
   };
 
   const skillsData = [
-    { icon: <Camera className="w-5 h-5 text-soft-blue" />, text: "Portrait Photography" },
-    { icon: <Edit className="w-5 h-5 text-soft-blue" />, text: "Photo Editing" },
-    { icon: <BookOpen className="w-5 h-5 text-soft-blue" />, text: "Storytelling" },
+    { icon: <Coffee className="w-5 h-5 text-soft-blue" />, text: "Java (Spring boot)" },
+    { icon: <Zap className="w-5 h-5 text-soft-blue" />, text: "Python (Flask)" },
+    { icon: <Server className="w-5 h-5 text-soft-blue" />, text: "Javascript (Node.JS)" },
   ];
 
   const interestsData = [
-    { icon: <Plane className="w-5 h-5 text-soft-blue" />, text: "Travel" },
-    { icon: <Leaf className="w-5 h-5 text-soft-blue" />, text: "Nature" },
-    { icon: <Paintbrush className="w-5 h-5 text-soft-blue" />, text: "Art" },
+    { icon: <Code className="w-5 h-5 text-soft-blue" />, text: "FiveM Script Writer" },
+    { icon: <Shield className="w-5 h-5 text-soft-blue" />, text: "Chelsea Fan" }
   ];
 
   const imageUrls = [
-    "https://images.unsplash.com/photo-1554941829-202a0b2403b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-    "https://images.unsplash.com/photo-1621784563330-caee0b138a00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+    "https://arkiana.com/wp-content/uploads/2023/02/Node-Js-vs-Flask.webp",
+    "https://gatu.wiki/wp-content/uploads/2022/06/fivem-developer-mode-1-810x500.jpg",
+    "https://wallpapers.com/images/hd/chelsea-fc-fans-waving-flags-s3v0b843vniabw4m.jpg"
   ];
 
   return (
@@ -66,9 +66,19 @@ const AboutSection = () => {
               animationDelay: '0.2s',
               animationPlayState: animationTriggered ? 'running' : 'paused'
             }}>
-              <p className="text-soft-dark/90 mb-8">
+              {/* <p className="text-soft-dark/90 mb-8">
                 I'm a passionate photographer with over 5 years of experience capturing the beauty of nature and human emotions. Based in Seattle, I specialize in portrait and landscape photography, aiming to tell stories through every frame. When I'm not behind the camera, you'll find me hiking or exploring new creative projects.
+              </p> */}
+
+              <p className="text-soft-dark/90 mb-8">
+                I'm an aspiring developer who completed my third-year Diploma in Business Information
+                Technology at the University of Johannesburg, South Africa, and am now pursuing my Advanced Diploma.
+                I’m passionate about backend development and modding in Rockstar Games'
+                GTA 5 as a FiveM Developer for the RP community, creating immersive player experiences.
+                Based in Johannesburg, I bring a local perspective to tech. When not coding, I support my
+                favorite football team, Chelsea.
               </p>
+
             </div>
             
             {/* Skills */}

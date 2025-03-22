@@ -1,12 +1,14 @@
 
 import { useState, useEffect, useRef } from 'react';
 
+
 interface ProjectData {
   id: string;
   title: string;
   description: string;
   videoSrc: string;
   thumbnail: string;
+  projectLink: string,
   category: string;
 }
 
@@ -16,39 +18,44 @@ const PortfolioSection = () => {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
   const videoRefs = useRef<Record<string, HTMLVideoElement>>({});
 
+
   // Project data
   const projects: ProjectData[] = [
     {
       id: 'project1',
-      title: 'Golden Hour Portraits',
-      description: 'A cinematic reel of portraits capturing the warmth of the golden hour in rural landscapes.',
-      videoSrc: 'https://player.vimeo.com/external/517090025.sd.mp4?s=52bbecdebbe1846a5761911e2b8c3dc24b9cd02b&profile_id=165&oauth2_token_id=57447761',
-      thumbnail: 'https://images.unsplash.com/photo-1504439904031-93ded9f93e4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
-      category: 'portraits',
+      title: 'Drum-kit-interactive',
+      description: 'an interactive drum kit built with JavaScript, where each keyboard key is mapped to a unique drum instrument. Press a key or click an on-screen instrument to trigger authentic drum sounds, creating your own rhythms in real-time. Simple, fun, and perfect for music enthusiasts and casual players alike!"',
+      videoSrc: 'public/videos/Drum Kit.mp4',
+      thumbnail: 'public/images/Drum Kit.png',
+      projectLink: 'https://themba619.github.io/drum-kit-interactive/',
+      category: 'javascript',
     },
     {
       id: 'project2',
-      title: 'Urban Exploration',
-      description: 'Discovering hidden corners and architectural marvels in the bustling cityscape.',
+      title: 'Simon-Says-Game',
+      description: 'In this game, players must watch and listen carefully as a sequence of colored buttons (1 of 4) lights up and plays a sound. The player must then click the buttons in the exact order they were shown. Each round, a new color is added to the sequence, requiring the player to recall and repeat all previous steps plus the new one. The game continues until the player makes a mistake. How long can you keep up?',
       videoSrc: 'https://player.vimeo.com/external/449525085.sd.mp4?s=90fc5efebd9d822ef3fe14a95b265b0d55a68b01&profile_id=165&oauth2_token_id=57447761',
-      thumbnail: 'https://images.unsplash.com/photo-1473895417522-9ca15cfba9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-      category: 'landscapes',
+      thumbnail: 'public/images/Simon Says.png',
+      projectLink: 'https://themba619.github.io/Simon-Says-Game/ ',
+      category: 'javascript',
     },
     {
       id: 'project3',
-      title: 'Mountain Adventures',
-      description: 'Capturing the majesty and serenity of mountain landscapes through the changing seasons.',
-      videoSrc: 'https://player.vimeo.com/external/437591446.sd.mp4?s=1b0e1d2a8c05512b4d8a2d4463acd2b7ccf0891e&profile_id=165&oauth2_token_id=57447761',
-      thumbnail: 'https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
-      category: 'landscapes',
+      title: 'Website Under Construction',
+      description: 'Coming Soon',
+      videoSrc: 'https://th.bing.com/th/id/R.616d34592c3ecd938f93748b7573ce69?rik=iHhkle3gFWspxg&pid=ImgRaw&r=0',
+      thumbnail: 'public/images/Under Construction.png',
+      projectLink: 'ComingSoon',
+      category: 'Python and Java',
     },
     {
       id: 'project4',
-      title: 'Intimate Moments',
-      description: 'Documenting genuine connections and emotional storytelling in portrait photography.',
+      title: 'Website Under Construction',
+      description: 'Coming Soon.',
       videoSrc: 'https://player.vimeo.com/external/475346667.sd.mp4?s=db70287dd906d85388b272127396be42c50fb62f&profile_id=165&oauth2_token_id=57447761',
-      thumbnail: 'https://images.unsplash.com/photo-1516918842892-1c8c1fef223e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-      category: 'portraits',
+      thumbnail: 'public/images/Under Construction.png',
+      projectLink: 'comingSoon',
+      category: 'Python and Java',
     },
   ];
 
@@ -147,9 +154,9 @@ const PortfolioSection = () => {
                   ? 'bg-soft-blue text-white' 
                   : 'bg-gray-200 text-soft-dark hover:bg-gray-300'
               }`}
-              onClick={() => setActiveFilter('portraits')}
+              onClick={() => setActiveFilter('javascript')}
             >
-              Portraits
+              Javascript Projects
             </button>
             <button 
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -157,9 +164,9 @@ const PortfolioSection = () => {
                   ? 'bg-soft-blue text-white' 
                   : 'bg-gray-200 text-soft-dark hover:bg-gray-300'
               }`}
-              onClick={() => setActiveFilter('landscapes')}
+              onClick={() => setActiveFilter('Python and Java')}
             >
-              Landscapes
+              Python and Java Projects
             </button>
           </div>
         </div>
@@ -222,7 +229,7 @@ const PortfolioSection = () => {
                   <h3 className="text-xl font-bold mb-2 text-soft-dark">{project.title}</h3>
                   <p className="text-soft-dark/70 text-sm mb-4">{project.description}</p>
                   <a 
-                    href="#" 
+                    href={project.projectLink} target="_blank"
                     className="text-soft-blue text-sm font-medium inline-flex items-center transition-all duration-300 hover:text-soft-blue-hover"
                   >
                     View Full Project

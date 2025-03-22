@@ -28,14 +28,18 @@ const HeroSection = () => {
         <div className={`text-center md:text-left md:w-1/2 mb-12 md:mb-0 transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-soft-dark leading-tight mb-4">
-              John Doe
+              Themba Biyela
             </h1>
           </div>
           
           <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <p className="text-lg md:text-xl text-soft-dark/80 mb-8 max-w-lg">
-              Creative Photographer | Storyteller | Nature Enthusiast
+              Software Developer | Problem Solver 
             </p>
+          </div>
+
+          <div >
+
           </div>
           
           <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
@@ -50,13 +54,15 @@ const HeroSection = () => {
         
         {/* Profile Image */}
         <div className={`md:w-1/2 flex justify-center md:justify-end transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="relative rounded-full h-60 w-60 md:h-72 md:w-72 lg:h-80 lg:w-80 overflow-hidden border-2 border-white shadow-lg">
-            <div className={`image-blur-wrapper ${isLoaded ? 'image-loaded' : 'image-blur'}`}>
+          <div className="relative rounded-full h-60 w-60 md:h-72 md:w-72 lg:h-80 lg:w-80 overflow-hidden border-2 border-white shadow-lg flex items-center justify-center">
+            <div className="absolute inset-0">
               <img 
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" 
-                alt="John Doe - Photographer"
-                className="h-full w-full object-cover transition-transform duration-700"
-                style={{ transform: isLoaded ? 'scale(1)' : 'scale(1.1)' }}
+                src="public/images/Profile.jpeg" 
+                alt="Themba Biyela - Software developer"
+                // className="h-full w-full object-cover transition-transform duration-700"
+                // style={{ transform: isLoaded ? 'scale(1)' : 'scale(1.1)' }}
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{ transform: isLoaded ? 'scale(1.05)' : 'scale(1.1)' }}
                 onLoad={() => setIsLoaded(true)}
               />
             </div>
