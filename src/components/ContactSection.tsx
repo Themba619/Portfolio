@@ -1,8 +1,13 @@
 
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import $ from 'jquery'
 
 const ContactSection = () => {
+  const serviceID=import.meta.env.VITE_EMAIL_JS_SERVICE_ID.trim();
+  const templateID=import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID.trim();
+  const userID=import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY.trim();
+
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
@@ -42,8 +47,38 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Handle form submission
     setTimeout(() => {
+      var data = {
+        service_id: serviceID.trim(),
+        template_id: templateID.trim(),
+        user_id: userID.trim(),
+        template_params: {
+          'user_name': formData.name,
+          'user_email': formData.email,
+          'message': formData.message
+        }
+      }
+
+      // console.log('Before API call - Service ID:', serviceID);
+      // console.log('Before API call - Template ID:', templateID);
+      // console.log('Before API call - User ID:', userID);
+
+      $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+        type: 'POST',
+        data: JSON.stringify(data),
+        contentType: 'application/json'
+      }).done( () => {
+        alert('Email sent');
+      }).fail( (error: any) => {
+        console.log('Oops... ' + JSON.stringify(error));
+      });
+      
+      // .finally( () => {
+      //   alert('Your mail is sent!');
+      // })
+    
+
       toast({
         title: "Message sent",
         description: "Thanks for reaching out! I'll get back to you soon.",
@@ -58,6 +93,8 @@ const ContactSection = () => {
       
       setIsSubmitting(false);
     }, 1500);
+
+    
   };
   
   return (

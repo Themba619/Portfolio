@@ -34,7 +34,7 @@ const PortfolioSection = () => {
       id: 'project2',
       title: 'Simon-Says-Game',
       description: 'In this game, players must watch and listen carefully as a sequence of colored buttons (1 of 4) lights up and plays a sound. The player must then click the buttons in the exact order they were shown. Each round, a new color is added to the sequence, requiring the player to recall and repeat all previous steps plus the new one. The game continues until the player makes a mistake. How long can you keep up?',
-      videoSrc: 'https://player.vimeo.com/external/449525085.sd.mp4?s=90fc5efebd9d822ef3fe14a95b265b0d55a68b01&profile_id=165&oauth2_token_id=57447761',
+      videoSrc: 'public/videos/Simon Says.mp4',
       thumbnail: 'public/images/Simon Says.png',
       projectLink: 'https://themba619.github.io/Simon-Says-Game/ ',
       category: 'javascript',
