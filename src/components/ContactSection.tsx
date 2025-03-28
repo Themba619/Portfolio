@@ -60,10 +60,6 @@ const ContactSection = () => {
         }
       }
 
-      // console.log('Before API call - Service ID:', serviceID);
-      // console.log('Before API call - Template ID:', templateID);
-      // console.log('Before API call - User ID:', userID);
-
       $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
         type: 'POST',
         data: JSON.stringify(data),
@@ -71,12 +67,8 @@ const ContactSection = () => {
       }).done( () => {
         alert('Email sent');
       }).fail( (error: any) => {
-        console.log('Oops... ' + JSON.stringify(error));
+        alert('Email has not been sent this issue will be fixed sent');
       });
-      
-      // .finally( () => {
-      //   alert('Your mail is sent!');
-      // })
     
 
       toast({
