@@ -1,6 +1,8 @@
 
 import { useState, useEffect } from 'react';
 
+import profileImage from "../../public/images/Profile.jpeg";
+
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   
@@ -57,7 +59,8 @@ const HeroSection = () => {
           <div className="relative rounded-full h-60 w-60 md:h-72 md:w-72 lg:h-80 lg:w-80 overflow-hidden border-2 border-white shadow-lg flex items-center justify-center">
             <div className="absolute inset-0">
               <img 
-                src="public/images/Profile.jpeg" 
+                src={profileImage} 
+                // dist\images\Profile.jpeg
                 alt="Themba Biyela - Software developer"
                 // className="h-full w-full object-cover transition-transform duration-700"
                 // style={{ transform: isLoaded ? 'scale(1)' : 'scale(1.1)' }}

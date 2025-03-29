@@ -1,6 +1,13 @@
 
 import { useState, useEffect, useRef } from 'react';
 
+import drumKitThumnbnail from "../../public/images/Drum Kit.png";
+import simonSaysThumbnail from "../../public/images/Simon Says.png";
+import underConstructionThumbnail from "../../public/images/Under Construction.png";
+
+import drumKitVideo from "../../public/videos/Drum Kit.mp4";
+import simonSaysVideo from "../../public/videos/Simon Says.mp4";
+
 
 interface ProjectData {
   id: string;
@@ -25,8 +32,8 @@ const PortfolioSection = () => {
       id: 'project1',
       title: 'Drum-kit-interactive',
       description: 'an interactive drum kit built with JavaScript, where each keyboard key is mapped to a unique drum instrument. Press a key or click an on-screen instrument to trigger authentic drum sounds, creating your own rhythms in real-time. Simple, fun, and perfect for music enthusiasts and casual players alike!"',
-      videoSrc: 'public/videos/Drum Kit.mp4',
-      thumbnail: 'public/images/Drum Kit.png',
+      videoSrc: drumKitVideo,
+      thumbnail: drumKitThumnbnail,
       projectLink: 'https://themba619.github.io/drum-kit-interactive/',
       category: 'javascript',
     },
@@ -34,8 +41,8 @@ const PortfolioSection = () => {
       id: 'project2',
       title: 'Simon-Says-Game',
       description: 'In this game, players must watch and listen carefully as a sequence of colored buttons (1 of 4) lights up and plays a sound. The player must then click the buttons in the exact order they were shown. Each round, a new color is added to the sequence, requiring the player to recall and repeat all previous steps plus the new one. The game continues until the player makes a mistake. How long can you keep up?',
-      videoSrc: 'public/videos/Simon Says.mp4',
-      thumbnail: 'public/images/Simon Says.png',
+      videoSrc: simonSaysVideo,
+      thumbnail: simonSaysThumbnail,
       projectLink: 'https://themba619.github.io/Simon-Says-Game/ ',
       category: 'javascript',
     },
@@ -43,8 +50,8 @@ const PortfolioSection = () => {
       id: 'project3',
       title: 'Website Under Construction',
       description: 'Coming Soon',
-      videoSrc: 'https://th.bing.com/th/id/R.616d34592c3ecd938f93748b7573ce69?rik=iHhkle3gFWspxg&pid=ImgRaw&r=0',
-      thumbnail: 'public/images/Under Construction.png',
+      videoSrc: 'https://www.youtube.com/watch?v=VARZq27UM0g&list=PPSV',
+      thumbnail: underConstructionThumbnail,
       projectLink: 'ComingSoon',
       category: 'Python and Java',
     },
@@ -53,7 +60,7 @@ const PortfolioSection = () => {
       title: 'Website Under Construction',
       description: 'Coming Soon.',
       videoSrc: 'https://player.vimeo.com/external/475346667.sd.mp4?s=db70287dd906d85388b272127396be42c50fb62f&profile_id=165&oauth2_token_id=57447761',
-      thumbnail: 'public/images/Under Construction.png',
+      thumbnail: underConstructionThumbnail,
       projectLink: 'comingSoon',
       category: 'Python and Java',
     },
