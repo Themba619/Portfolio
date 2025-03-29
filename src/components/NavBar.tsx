@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import profileImage from "../../public/images/Profile.jpeg";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,11 +41,8 @@ const NavBar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        {/* C:\Users\themb\projects\gentle-portfolio-whisper\public\Logo Icon.jpg */}
-        {/* <a href="public/images/your-image.jpg"> */}
-        {/* src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" 
-                 */}
-        <a href="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" className="text-soft-dark font-montserrat font-bold text-2xl transition-opacity hover:opacity-80">
+        
+        <a href={profileImage}>
           Themba<span className="text-soft-blue">Biyela</span>
         </a>
 
