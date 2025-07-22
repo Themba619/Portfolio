@@ -44,7 +44,7 @@ const AboutSection = () => {
   ];
 
   const imageUrls = [
-    "https://arkiana.com/wp-content/uploads/2023/02/Node-Js-vs-Flask.webp",
+    "https://tse2.mm.bing.net/th/id/OIP.98CHWXmXu88W1l3eTgBxUgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
     "https://gatu.wiki/wp-content/uploads/2022/06/fivem-developer-mode-1-810x500.jpg",
     "https://wallpapers.com/images/hd/chelsea-fc-fans-waving-flags-s3v0b843vniabw4m.jpg"
   ];
